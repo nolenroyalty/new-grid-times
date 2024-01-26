@@ -1,17 +1,13 @@
-import React from 'react';
-import styled from 'styled-components/macro';
+import React from "react";
+import styled from "styled-components/macro";
 
-import {
-  MAIN_STORY,
-  OPINION_STORIES,
-  SECONDARY_STORIES,
-} from '../../data';
+import { MAIN_STORY, OPINION_STORIES, SECONDARY_STORIES } from "../../data";
 
-import SectionTitle from '../SectionTitle';
-import MainStory from '../MainStory';
-import SecondaryStory from '../SecondaryStory';
-import OpinionStory from '../OpinionStory';
-import Advertisement from '../Advertisement';
+import SectionTitle from "../SectionTitle";
+import MainStory from "../MainStory";
+import SecondaryStory from "../SecondaryStory";
+import OpinionStory from "../OpinionStory";
+import Advertisement from "../Advertisement";
 
 const MainStoryGrid = () => {
   return (
@@ -47,10 +43,10 @@ const MainStoryGrid = () => {
 const Wrapper = styled.div`
   display: grid;
   grid-template-areas:
-    'main-story'
-    'secondary-stories'
-    'opinion-stories'
-    'advertisement';
+    "main-story"
+    "secondary-stories"
+    "opinion-stories"
+    "advertisement";
   gap: 48px;
   margin-bottom: 48px;
 `;
@@ -66,6 +62,15 @@ const SecondaryStorySection = styled.section`
 const StoryList = styled.div`
   display: flex;
   flex-direction: column;
+
+  & > *:not(:last-of-type) {
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--color-gray-300);
+  }
+
+  & > *:not(:first-of-type) {
+    padding-top: 16px;
+  }
 `;
 
 const OpinionSection = styled.section`
